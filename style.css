@@ -1,0 +1,173 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #c7eaff, #d7d4ff, #ffd3b6);
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --primary: #ff8e4f;
+  --primary-soft: rgba(255, 142, 79, 0.18);
+  --text: #3a3a3a;
+  --muted: #6d6d6d;
+  --radius-lg: 20px;
+  --spacing: 1rem;
+  --shadow-soft: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 🔹 Bas-styling för sidan */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  background: var(--bg-gradient);
+  height: 100vh; /* 🔸 full höjd */
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centrerat kort */
+  color: var(--text);
+}
+
+/* 🔹 Själva “kortet” / appen */
+.app {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+
+  padding: 2rem 2.2rem;
+  max-width: 640px;
+  width: 100%;
+}
+
+/* Rubriken */
+.app h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  color: var(--primary);
+}
+
+/* Tagline / intro-texten */
+.tagline {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* 🔹 Kontroller (språk, input, knapp) */
+.controls {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+select:focus,
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-soft);
+}
+
+/* Knappen */
+#random-btn {
+  margin-top: 0.25rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  background: linear-gradient(135deg, #ff8e4f, #ffb469);
+  color: white;
+
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.08s ease;
+}
+
+#random-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(255, 142, 79, 0.4);
+  filter: brightness(1.03);
+}
+
+/* 🔹 Resultat-kortet */
+.card {
+  padding: 1.2rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.word-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+#word {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.phonetic {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.definition {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Ljudknapp */
+.audio-btn {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary);
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.audio-btn:hover {
+  background: rgba(255, 142, 79, 0.28);
+}
+
+/* Hjälpklass vi kommer använda senare i JS */
+.hidden {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1.5rem 1.2rem;
+  }
+}

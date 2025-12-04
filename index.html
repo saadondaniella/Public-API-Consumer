@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dagens ord</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>World of Words</h1>
+      <p class="tagline">
+        Lär dig ett nytt ord varje dag – på valfritt språk. Slumpa fram dagens
+        ord och lyssna på hur det uttalas.
+      </p>
+      <!--  KONTROLLER (språk + eget ord + knapp) -->
+      <section class="controls">
+        <label for="language">Välj språk</label>
+        <select id="language">
+          <option value="en_US">Engelska (US)</option>
+          <option value="en_GB">Engelska (UK)</option>
+          <option value="es">Spanska</option>
+          <option value="fr">Franska</option>
+          <option value="de">Tyska</option>
+        </select>
+
+        <label for="custom-word">Eget ord (valfritt)</label>
+        <input
+          id="custom-word"
+          type="text"
+          placeholder="Skriv ett ord om du vill välja själv"
+        />
+        <button id="random-btn">Slumpa dagens ord</button>
+      </section>
+
+      <!-- RESULTAT-KORT (visar ord + betydelse + uttal senare) -->
+
+      <section id="result" class="card">
+        <div class="word-row">
+          <h2 id="word">Inget ord ännu</h2>
+          <span id="phonetic" class="phonetic"></span>
+        </div>
+        <p id="definition" class="definition">
+          Klicka på knappen för att hämta ett ord från API:et.
+        </p>
+        <button id="audio-btn" class="audio-btn">▶ Spela upp uttal</button>
+        <audio id="audio-player"></audio>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
