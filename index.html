@@ -3,50 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <title>Dagens ord</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="app">
-      <h1>World of Words</h1>
-      <p class="tagline">
-        Lär dig ett nytt ord varje dag – på valfritt språk. Slumpa fram dagens
-        ord och lyssna på hur det uttalas.
-      </p>
-      <!--  KONTROLLER (språk + eget ord + knapp) -->
-      <section class="controls">
-        <label for="language">Välj språk</label>
-        <select id="language">
-          <option value="en_US">Engelska (US)</option>
-          <option value="en_GB">Engelska (UK)</option>
-          <option value="es">Spanska</option>
-          <option value="fr">Franska</option>
-          <option value="de">Tyska</option>
-        </select>
+    <main class="page-layout">
+      <section class="app">
+        <h1>World of Words</h1>
+        <p class="tagline">
+          Res med självförtroende! Översätt viktiga ord och meningar – eller
+          slumpa fram reseord som du kan ha nytta av på resan.
+        </p>
 
-        <label for="custom-word">Eget ord (valfritt)</label>
-        <input
-          id="custom-word"
-          type="text"
-          placeholder="Skriv ett ord om du vill välja själv"
-        />
-        <button id="random-btn">Slumpa dagens ord</button>
+        <section class="controls">
+          <label for="language">Välj språk</label>
+          <select id="language">
+            <option value="en_US">🇺🇸 Engelska (US)</option>
+            <option value="it">🇮🇹 Italienska</option>
+            <option value="es">🇪🇸 Spanska</option>
+            <option value="fr">🇫🇷 Franska</option>
+            <option value="de">🇩🇪 Tyska</option>
+            <option value="zh">🇨🇳 Kinesiska</option>
+            <option value="he">🇮🇱 Hebreiska</option>
+            <option value="ja">🇯🇵 Japanska</option>
+          </select>
+          <label for="custom-word">Eget ord eller mening (valfritt)</label>
+          <input
+            id="custom-word"
+            type="text"
+            placeholder="Skriv ett ord eller en mening du vill översätta"
+          />
+          <button id="random-btn">Slumpa dagens ord</button>
+        </section>
+
+        <section id="result" class="card">
+          <div class="word-row">
+            <h2 id="word">Inget ord ännu</h2>
+            <span id="phonetic" class="phonetic"></span>
+          </div>
+          <p id="definition" class="definition">
+            Skriv ett ord eller en mening, eller klicka på knappen för att
+            slumpa fram ett reseord att översätta.
+          </p>
+        </section>
       </section>
 
-      <!-- RESULTAT-KORT (visar ord + betydelse + uttal senare) -->
-
-      <section id="result" class="card">
-        <div class="word-row">
-          <h2 id="word">Inget ord ännu</h2>
-          <span id="phonetic" class="phonetic"></span>
-        </div>
-        <p id="definition" class="definition">
-          Klicka på knappen för att hämta ett ord från API:et.
-        </p>
-        <button id="audio-btn" class="audio-btn">▶ Spela upp uttal</button>
-        <audio id="audio-player"></audio>
+      <figure class="illustration">
+        <img src="travelCouple.jpg" alt="Light up your language" />
+      </figure>
+      <section class="tips card">
+        <h3>
+          Tips på bra ord eller meningar att kunna när du är på resande fot
+        </h3>
+        <p id="tips-list"></p>
       </section>
     </main>
-
     <script src="script.js"></script>
   </body>
 </html>
