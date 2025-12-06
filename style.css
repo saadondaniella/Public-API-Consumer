@@ -162,7 +162,7 @@ input:focus {
 
 .illustration {
   grid-area: image;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 0 40px rgba(0, 180, 200, 0.55);
   overflow: hidden;
   background: var(--card-bg);
   border-radius: 18px;
