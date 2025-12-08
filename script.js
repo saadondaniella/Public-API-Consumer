@@ -6,9 +6,9 @@ const LANG_CODE = {
   es: "es",
   fr: "fr",
   de: "de",
-  zh: "zh", // kinesiska
-  he: "he", // hebreiska
-  ja: "ja", // japanska
+  zh: "zh",
+  he: "he",
+  ja: "ja",
 };
 
 const LANGUAGE_IMAGE = {
@@ -130,6 +130,7 @@ randomBtn.addEventListener("click", async () => {
       error.message || "Något gick fel. Prova ett annat ord.";
   }
 });
+
 const tipsListEl = document.getElementById("tips-list");
 
 function renderTips() {
