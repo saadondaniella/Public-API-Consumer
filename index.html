@@ -42,6 +42,7 @@
         <section class="controls">
           <label for="language">Välj språk</label>
           <select id="language">
+            <option value="" disabled selected>🌍 Välj språk</option>
             <option value="en_US">🇺🇸 Engelska (US)</option>
             <option value="it">🇮🇹 Italienska</option>
             <option value="es">🇪🇸 Spanska</option>
@@ -73,7 +74,11 @@
       </section>
 
       <figure class="illustration">
-        <img src="travelCouple.jpg" alt="Light up your language" />
+        <img
+          id="language-image"
+          src="pictures/travelCouple.jpg"
+          alt="Light up your language"
+        />
       </figure>
       <section class="tips card">
         <h3>

@@ -161,10 +161,8 @@ input:focus {
 }
 
 .illustration {
-  grid-area: image;
-  box-shadow: 0 0 40px rgba(0, 180, 200, 0.55);
+  height: 70vh;
   overflow: hidden;
-  background: var(--card-bg);
   border-radius: 18px;
 }
 
@@ -173,7 +171,6 @@ input:focus {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
 }
 
 .tips {

@@ -11,6 +11,18 @@ const LANG_CODE = {
   ja: "ja", // japanska
 };
 
+const LANGUAGE_IMAGE = {
+  default: "pictures/default.jpg",
+  en_US: "pictures/america.jpg",
+  it: "pictures/italy.jpg",
+  es: "pictures/spain.jpg",
+  fr: "pictures/france.jpg",
+  de: "pictures/germany.jpg",
+  zh: "pictures/china.jpg",
+  he: "pictures/israel.jpg",
+  ja: "pictures/japan.jpg",
+};
+
 const SWEDISH_TRAVEL_WORDS = [
   "pass",
   "bagage",
@@ -50,6 +62,19 @@ const randomBtn = document.getElementById("random-btn");
 const wordEl = document.getElementById("word");
 const translationEl = document.getElementById("phonetic");
 const definitionEl = document.getElementById("definition");
+
+const imageEl = document.getElementById("language-image");
+function updateLanguageImage(langKey) {
+  if (!langKey) {
+    imageEl.src = LANGUAGE_IMAGE.default;
+    return;
+  }
+  imageEl.src = LANGUAGE_IMAGE[langKey] || LANGUAGE_IMAGE.default;
+}
+languageSelect.addEventListener("change", () => {
+  const langKey = languageSelect.value;
+  updateLanguageImage(langKey);
+});
 
 function getSwedishWord() {
   const custom = customWordInput.value.trim();
