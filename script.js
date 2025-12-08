@@ -64,6 +64,7 @@ const translationEl = document.getElementById("phonetic");
 const definitionEl = document.getElementById("definition");
 
 const imageEl = document.getElementById("language-image");
+
 function updateLanguageImage(langKey) {
   if (!langKey) {
     imageEl.src = LANGUAGE_IMAGE.default;
@@ -71,6 +72,7 @@ function updateLanguageImage(langKey) {
   }
   imageEl.src = LANGUAGE_IMAGE[langKey] || LANGUAGE_IMAGE.default;
 }
+
 languageSelect.addEventListener("change", () => {
   const langKey = languageSelect.value;
   updateLanguageImage(langKey);
@@ -80,7 +82,7 @@ function getSwedishWord() {
   const custom = customWordInput.value.trim();
 
   if (custom !== "") {
-    return custom; //
+    return custom;
   }
 
   const randomIndex = Math.floor(Math.random() * SWEDISH_TRAVEL_WORDS.length);
