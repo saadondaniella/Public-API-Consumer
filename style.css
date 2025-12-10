@@ -212,38 +212,3 @@ input:focus {
     height: 100%;
   }
 }
-
-.page-layout {
-  position: relative;
-}
-
-.airplane {
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 200px;
-  height: 200px;
-  transform: translateY(-50%);
-  opacity: 0;
-  animation: airplane-curve 9s ease-in-out infinite;
-}
-
-@keyframes airplane-curve {
-  0% {
-    opacity: 0;
-    transform: translate(0, -50%) rotate(10deg);
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  50% {
-    transform: translate(-60vw, -40vh) rotate(-10deg);
-  }
-
-  100% {
-    transform: translate(-50vw, -90vh) rotate(-25deg);
-    opacity: 0;
-  }
-}
