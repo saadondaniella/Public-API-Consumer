@@ -1,47 +1,44 @@
 # World of Words
 
-World of Words är en liten webbapplikation där användaren kan översätta svenska ord och meningar till flera olika språk med hjälp av ett publikt API. Användaren kan också slumpa fram reseord och fraser samt se en bild som byts ut beroende på vilket språk som valts.
+World of Words is a small web application where users can translate Swedish words and sentences into several different languages using a public API. Users can also generate random travel-related words and phrases, while an image changes depending on the selected language.
 
-Projektet är skapat som en inlämningsuppgift i kursen "Public API Consumer".
-
----
-
-## Syfte
-
-Syftet med projektet är att:
-
-- Använda ett publikt API för att hämta extern data.
-- Trigga datainhämtning via events (till exempel knapptryck).
-- Bygga ett tydligt och responsivt användargränssnitt.
-- Använda CSS-variabler för färger och skapa en enhetlig design.
+The project was created as an assignment for the **Public API Consumer** course.
 
 ---
 
-## Funktionalitet
+## Purpose
 
-Applikationen har följande funktioner:
+The purpose of the project is to:
 
-- Översätter svenska ord eller meningar till valt språk via MyMemory Translation API.
-- Användaren kan:
-  - Skriva in ett eget ord eller en egen mening på svenska.
-  - Låta appen slumpa fram ett svenskt reseord.
-- Översättningen startas när användaren klickar på knappen "Slumpa orden".
-- Språk väljs via en dropdown-meny (t.ex. engelska, italienska, spanska, franska, tyska, kinesiska, hebreiska, japanska).
-- Bilden bredvid applikationen uppdateras beroende på valt språk.
-- En lista med reseord/fraser visas som små tips.
-- Layouten är responsiv och anpassad för både mobil och desktop.
+- Use a public API to fetch external data.
+- Trigger data fetching through events, such as button clicks.
+- Build a clear and responsive user interface.
+- Use CSS variables for colors and create a consistent design.
 
 ---
 
-## Publikt API
+## Features
 
-Projektet använder detta publika API:
+The application includes the following features:
+
+- Translates Swedish words or sentences into a selected language using the MyMemory Translation API.
+- The user can:
+  - Enter their own Swedish word or sentence.
+  - Let the application generate a random Swedish travel-related word.
+- The translation starts when the user clicks the **"Slumpa orden"** button.
+- Languages are selected through a dropdown menu, including English, Italian, Spanish, French, German, Chinese, Hebrew and Japanese.
+- The image next to the application changes depending on the selected language.
+- A list of travel-related words and phrases is displayed as small tips.
+- The layout is responsive and adapted for both mobile and desktop.
+
+---
+
+## Public API
+
+The project uses the following public API:
 
 - **MyMemory Translation API**  
-  URL-exempel:  
-  `https://api.mymemory.translated.net/get?q=ORD_HÄR&langpair=sv|en`
+  Example URL:  
+  `https://api.mymemory.translated.net/get?q=WORD_HERE&langpair=sv|en`
 
-API:et används för att översätta ett svenskt ord (eller fras) till valt målspråk. Språkkoden i `langpair` styrs av användarens val i `<select>`-fältet.
-
----
 
