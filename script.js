@@ -93,7 +93,7 @@ async function translateSwedishWord(word, langKey) {
   const targetLang = LANG_CODE[langKey];
 
   const url = `${TRANSLATE_URL}?q=${encodeURIComponent(
-    word
+    word,
   )}&langpair=sv|${targetLang}`;
 
   const res = await fetch(url);
@@ -138,3 +138,5 @@ function renderTips() {
 }
 
 renderTips();
+
+// here is some space for reviews
